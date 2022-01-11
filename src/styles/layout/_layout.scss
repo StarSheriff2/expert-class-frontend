@@ -142,9 +142,6 @@ input[type="number"]:focus::placeholder {
 
 @media (min-width: $breakpoint-tablet) {
   .private-page-container {
-    margin-left: calc(var(--nav-panel-width) + 1.6rem) !important;
-    display: grid;
-    justify-content: center;
-    align-content: center;
+    margin-left: calc(var(--nav-panel-width) + 1.6rem);
   }
 }

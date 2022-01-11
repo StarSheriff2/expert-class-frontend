@@ -16,6 +16,12 @@
 }
 
 @media (min-width: $breakpoint-tablet) {
+  .classesPageContainer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
   .classesContentWrapper {
     width: calc(100vw - (var(--nav-panel-width) + 1.6rem + 40px));
   }
