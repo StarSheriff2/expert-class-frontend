@@ -70,7 +70,7 @@ function SignInPage() {
             type="text"
             name="username"
             value={formData.username}
-            placeholder="Please enter your username"
+            placeholder="username"
             required
           />
           <input className="button-white" type="submit" value="Sign in" />

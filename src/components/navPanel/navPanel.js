@@ -20,6 +20,7 @@ function NavPanel() {
   return (
     <>
       <nav className="nav-panel">
+        <a href="/" className="reload-page-logo">Expert Class</a>
         <NavLink to="/classes" className="nav-link" activeClassName="active-nav-link" exact>
           Classes
         </NavLink>

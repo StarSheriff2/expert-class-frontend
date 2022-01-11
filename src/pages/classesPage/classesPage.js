@@ -21,9 +21,15 @@ const ClassesPage = () => {
   return (
     (fetchStatus === 'fulfilled')
     && (
-    <div className="private-page-container">
-      <h2 className={styles.heading}>Classes</h2>
-      <Carousel classes={classes} />
+    <div className={`private-page-container ${styles.classesPageContainer}`}>
+      <div className={styles.classesContentWrapper}>
+        <h2 className={styles.heading}>Our Classes</h2>
+        <p className={styles.subHeading}>
+          Please browse through our
+          wide selection of expert classes
+        </p>
+        <Carousel classes={classes} />
+      </div>
     </div>
     )
   );

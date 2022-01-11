@@ -6,6 +6,7 @@ $breakpoint-tablet: 768px;
 
 $white: #fbfbfb;
 $black: black;
+$gray: rgb(161, 160, 160);
 $extra-dark-green: rgba(89, 114, 8, 0.781);
 $dark-green: rgba(151, 191, 15, 0.7);
 $dark-green-full: rgba(151, 191, 15, 1);
@@ -14,7 +15,7 @@ $light-green-transparency: rgb(161, 201, 29);
 $orange: rgba(255, 180, 0, 1);
 
 // Padding top for Slider Cards
-$padding-top-mobile: 80vh;
+$padding-top-mobile: calc(100vh - 189px);
 $padding-top: max(270px, calc(45% - 21px));
 $padding-top-details: max(280px, 30%);
 

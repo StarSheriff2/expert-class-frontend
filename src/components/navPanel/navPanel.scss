@@ -7,6 +7,20 @@
   height: 100vh;
   width: var(--nav-panel-width);
   border-right: 2px solid #eee;
+  margin-left: 1.6rem;
+}
+
+.reload-page-logo {
+  font-family: 'Meddon', cursive;
+  font-size: 4rem;
+  color: $black;
+  padding: 4rem 1rem 1rem 2rem;
+  transform: rotate(-15deg);
+  text-decoration: underline;
+}
+
+.reload-page-logo:hover {
+  text-decoration: underline;
 }
 
 .nav-link {
@@ -17,6 +31,10 @@
   color: $black;
   font-size: 1.8rem;
   padding: 1rem 1rem 1rem 2rem;
+}
+
+.nav-panel a:nth-child(2) {
+  margin-top: 7rem;
 }
 
 .nav-link:hover {
@@ -33,7 +51,8 @@
   display: none;
   position: absolute;
   bottom: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 800;
   padding: 1.2rem 5rem;
 }
 

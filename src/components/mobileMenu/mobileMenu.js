@@ -15,7 +15,7 @@ const MobileMenu = () => {
         className={styles.mobileMenu}
         onClick={handleClick}
       >
-        {open ? <i className={`far fa-times ${styles.menuIcon} ${styles.menuIcon__white}`} /> : <i className={`fas fa-bars ${styles.menuIcon}`} />}
+        {open ? <i className={`fas fa-times ${styles.menuIcon} ${styles.menuIcon__white}`} /> : <i className={`fas fa-bars ${styles.menuIcon}`} />}
       </button>
 
       {/* Nav Links */}
