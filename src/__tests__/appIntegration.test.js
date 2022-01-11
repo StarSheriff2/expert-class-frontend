@@ -37,7 +37,7 @@ describe('App', () => {
     fireEvent.click(signInLink);
     expect(getByRole('button')).toBeInTheDocument();
     expect(getByRole('textbox')).toBeInTheDocument();
-    expect(getByPlaceholderText('Please enter your username')).toBeInTheDocument();
+    expect(getByPlaceholderText('username')).toBeInTheDocument();
   });
 
   test('When user signs in he is taken to Classes page by default', async () => {

@@ -21,7 +21,7 @@ describe('Classes Page', () => {
   test('Shows available classes', async () => {
     const { getByText, findByText } = renderedComponent;
 
-    await waitFor(() => expect(getByText('Classes')).toBeInTheDocument());
+    await waitFor(() => expect(getByText('Our Classes')).toBeInTheDocument());
     expect(await findByText('English Composition')).toBeInTheDocument();
     expect(await findByText('Singing')).toBeInTheDocument();
   });

@@ -19,7 +19,7 @@ exports[`SignIn Page Renders the page 1`] = `
       <input
         name="username"
         onChange={[Function]}
-        placeholder="Please enter your username"
+        placeholder="username"
         required={true}
         type="text"
         value=""

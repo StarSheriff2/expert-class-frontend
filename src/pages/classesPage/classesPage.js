@@ -21,7 +21,7 @@ const ClassesPage = () => {
   return (
     (fetchStatus === 'fulfilled')
     && (
-    <div className={`private-page-container ${styles.classesPageContainer}`}>
+    <div className="private-page-container">
       <div className={styles.classesContentWrapper}>
         <h2 className={styles.heading}>Our Classes</h2>
         <p className={styles.subHeading}>

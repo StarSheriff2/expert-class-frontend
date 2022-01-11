@@ -1,13 +1,6 @@
 @import '../../styles/abstracts/fonts';
 @import '../../styles/abstracts/variables';
 
-// .classesPageContainer {
-//   margin-left: calc(var(--nav-panel-width) + 1.6rem) !important;
-//   display: grid;
-//   justify-content: center;
-//   align-content: center;
-// }
-
 .heading {
   text-align: center;
   margin: 25px auto 0.5rem;
@@ -23,13 +16,6 @@
 }
 
 @media (min-width: $breakpoint-tablet) {
-  .classesPageContainer {
-    margin-left: calc(var(--nav-panel-width) + 1.6rem) !important;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-  }
-
   .classesContentWrapper {
     width: calc(100vw - (var(--nav-panel-width) + 1.6rem + 40px));
   }

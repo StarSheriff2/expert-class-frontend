@@ -14,7 +14,7 @@ describe('NavPanel', () => {
       </HashRouter>,
     );
     const navLinks = (getAllByRole('link'));
-    expect(navLinks).toHaveLength(5);
+    expect(navLinks).toHaveLength(6);
     expect(getByRole('button', { name: /Logout/i })).toBeInTheDocument();
   });
 
@@ -43,20 +43,20 @@ describe('NavPanel', () => {
     );
 
     const navLinks = (getAllByRole('link'));
-    expect(navLinks).toHaveLength(10);
-    fireEvent.click(navLinks[0]);
+    expect(navLinks).toHaveLength(11);
+    fireEvent.click(navLinks[1]);
     expect(await findByText('English Composition')).toBeInTheDocument();
     expect(await findByText('Singing')).toBeInTheDocument();
-    fireEvent.click(navLinks[1]);
+    fireEvent.click(navLinks[2]);
     expect(await findByText('Register for an Expert Class')).toBeInTheDocument();
     expect(getByRole('button', { name: /Register/i })).toBeInTheDocument();
-    fireEvent.click(navLinks[2]);
-    expect(await findByText('Class: Photography')).toBeInTheDocument();
     fireEvent.click(navLinks[3]);
+    expect(await findByText('Class: Photography')).toBeInTheDocument();
+    fireEvent.click(navLinks[4]);
     const addClassInputs = (getAllByRole('textbox'));
     expect(addClassInputs).toHaveLength(3);
     expect(getByRole('button', { name: /Add/i })).toBeInTheDocument();
-    fireEvent.click(navLinks[4]);
+    fireEvent.click(navLinks[5]);
     const removeButtons = (getAllByTestId('removeBtn'));
     expect(removeButtons).toHaveLength(2);
   });
