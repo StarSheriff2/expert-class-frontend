@@ -25,8 +25,7 @@ export default function LandingPage() {
           Keep Growing With Unlimited Creative Classes.
           Grow Without Limits. Discover What You Can Create With Thousands of Inspiring Classes.
           Support of a Community.
-          Prompts & Resources. Browse Projects.
-          Offline viewing.
+          Prompts & Resources. Sign up Today.
         </p>
 
         <div className={styles.buttonsDiv}>
