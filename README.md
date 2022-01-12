@@ -19,11 +19,15 @@
 
 <p align="center">This web app allows users to sign up to courses in different cities around the world taught by leading experts in every field.</p>
 
+<p align="center"><small><strong>Note: </strong><i>This web app uses <u>cross-site cookies</u>. You need to <u>enable cross-site cookies in Safari and Chrome</u> to be able open the app in your device.</i></small></p>
+
 <br>
 
 <div align="center"><img width="100%" alt="app screenshot mobile" src="./.github/images/Screenshot_main.png">
 <img width="45%" alt="app screenshot mobile" src="./.github/images/Screenshot_register.png">
 <img width="45%" alt="app screenshot mobile" src="./.github/images/Screenshot_remove.png">
+<img width="30%" alt="app screenshot mobile" src="./.github/images/Screenshot_main_mobile.png">
+<img width="30%" alt="app screenshot mobile" src="./.github/images/Screenshot_nav_mobile.png">
 </div>
 
 ## About
