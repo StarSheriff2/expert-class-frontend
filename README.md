@@ -57,7 +57,11 @@ Deployed to Netlify: [Live Demo](http://expert-class-frontend-v2.netlify.app)
 
 ### Video Presentation
 
-...coming soon
+Watch a quick demo and walk-through of this project:
+<a href="https://www.loom.com/share/bf3cfe3590a9404da7badb3012248a57" target="_blank" rel="noopener noreferrer">
+  <p>Expert Class - 13 January 2022 - Watch Video</p>
+  <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bf3cfe3590a9404da7badb3012248a57-with-play.gif">
+</a>
 
 ### Built With
 - HTML, CSS, JavaScript
