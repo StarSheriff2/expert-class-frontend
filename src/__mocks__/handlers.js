@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import { rest } from 'msw';
 
-const baseURL = 'https://expert-class-backend.herokuapp.com/api/v1/';
+const baseURL = 'https://expert-class-production.up.railway.app/api/v1/';
 
 const mockApiResponses = {
   signUp: {
@@ -86,12 +86,14 @@ const mockApiResponses = {
     course: {
       id: 22,
       title: 'Landscaping',
-      description: 'Learn about the latest techniques and trends in this ever evolving field.',
+      description:
+        'Learn about the latest techniques and trends in this ever evolving field.',
       instructor: 'Andrés Segovia',
       duration: 5,
       created_at: new Date(Date.now()).toISOString().substr(0, 10),
       updated_at: new Date(Date.now()).toISOString().substr(0, 10),
-      course_image_url: 'https://res.cloudinary.com/starsheriff/image/upload/fake_image.jpeg',
+      course_image_url:
+        'https://res.cloudinary.com/starsheriff/image/upload/fake_image.jpeg',
     },
   },
   reservations: [
@@ -131,8 +133,12 @@ const mockApiResponses = {
         city: 'New York, USA',
         date,
         id: 47,
-        created_at: new Date(Date.now() + (3600 * 1000 * 24)).toISOString().substr(0, 10),
-        updated_at: new Date(Date.now() + (3600 * 1000 * 24)).toISOString().substr(0, 10),
+        created_at: new Date(Date.now() + 3600 * 1000 * 24)
+          .toISOString()
+          .substr(0, 10),
+        updated_at: new Date(Date.now() + 3600 * 1000 * 24)
+          .toISOString()
+          .substr(0, 10),
       },
       message: 'Reservation created successfully',
       status: 200,
@@ -141,61 +147,50 @@ const mockApiResponses = {
 };
 
 const handlers = [
-  rest.post(`${baseURL}users`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.signUp),
-  )),
-  rest.get(`${baseURL}signed_in`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.signedIn),
-  )),
-  rest.post(`${baseURL}sign_in`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.signIn),
-  )),
-  rest.delete(`${baseURL}sign_out`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.logout),
-  )),
-  rest.get(`${baseURL}courses`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.classes),
-  )),
-  rest.post(`${baseURL}courses`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.addClass),
-  )),
+  rest.post(`${baseURL}users`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.signUp))
+  ),
+  rest.get(`${baseURL}signed_in`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.signedIn))
+  ),
+  rest.post(`${baseURL}sign_in`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.signIn))
+  ),
+  rest.delete(`${baseURL}sign_out`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.logout))
+  ),
+  rest.get(`${baseURL}courses`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.classes))
+  ),
+  rest.post(`${baseURL}courses`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.addClass))
+  ),
   rest.delete(`${baseURL}courses/:id`, (req, res, ctx) => {
     const { id } = req.params;
-    const deletedClass = mockApiResponses.classes.filter((c) => c.id === Number(id));
+    const deletedClass = mockApiResponses.classes.filter(
+      (c) => c.id === Number(id)
+    );
 
     return res(
       ctx.status(200),
-      ctx.json(
-        {
-          course: deletedClass[0],
-          message: 'Course successfully deleted',
-          status: 200,
-        },
-      ),
+      ctx.json({
+        course: deletedClass[0],
+        message: 'Course successfully deleted',
+        status: 200,
+      })
     );
   }),
-  rest.get(`${baseURL}cities`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.cities),
-  )),
-  rest.get(`${baseURL}reservations`, (req, res, ctx) => res(
-    ctx.status(200),
-    ctx.json(mockApiResponses.reservations),
-  )),
+  rest.get(`${baseURL}cities`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.cities))
+  ),
+  rest.get(`${baseURL}reservations`, (req, res, ctx) =>
+    res(ctx.status(200), ctx.json(mockApiResponses.reservations))
+  ),
   rest.post(`${baseURL}reservations`, (req, res, ctx) => {
     const { reservation } = req.body;
     const { date } = reservation;
 
-    return res(
-      ctx.status(200),
-      ctx.json(mockApiResponses.reserveCourse(date)),
-    );
+    return res(ctx.status(200), ctx.json(mockApiResponses.reserveCourse(date)));
   }),
 ];
 

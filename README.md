@@ -77,8 +77,8 @@ Watch a quick demo and walk-through of this project:
 
 ### About the API
 
-- This app consumes a Ruby on Rails API. Here's the [link to the backend API](https://expert-class-backend.herokuapp.com/).
-- All [documentation can be accessed here](https://expert-class-backend.herokuapp.com/api-docs).
+- This app consumes a Ruby on Rails API. Here's the [link to the backend API](https://expert-class-production.up.railway.app/).
+- All [documentation can be accessed here](https://expert-class-production.up.railway.app/api-docs).
 
 ### Project Management
 
